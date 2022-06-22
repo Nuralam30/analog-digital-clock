@@ -16,10 +16,55 @@ body{
 }
 .container{
     position: relative;
-    min-height: 500px;
-    border: 1px solid #dedede;
+    background-color: #2f3c3e;
+    border-radius: 20px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
+            10px 50px 70px rgba(0, 0, 0, 0.25),
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .clock{
+    position: relative;
     width: 400px;
     height: 400px;
+    background-color: #2f3c3e;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #2f3c3e;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.clock span{
+    position: absolute;
+    inset : 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    /* 360 / 12 = 30deg */
+}
+.clock span b{
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0.25;
+
 }
