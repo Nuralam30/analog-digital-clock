@@ -23,9 +23,10 @@ body{
     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
             10px 50px 70px rgba(0, 0, 0, 0.25),
             inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-            inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+            inset 5px 5px 20px rgba(255, 255, 255, 0.2),
             inset -5px -5px 15px rgba(0, 0, 0, 0.75);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -37,7 +38,7 @@ body{
     border-radius: 50%;
     box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
             inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-            inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+            inset 5px 5px 20px rgba(255, 255, 255, 0.2),
             inset -5px -5px 15px rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
@@ -64,7 +65,7 @@ body{
     /* 360 / 12 = 30deg */
 }
 .clock span b{
-    font-size: 24px;
+    font-size: 2em;
     font-weight: 600;
     opacity: 0.25;
     display: inline-block;
@@ -122,5 +123,28 @@ body{
     top: -5px;
     box-shadow: 0 0 20px var(--clr),
                 0 0 60px var(--clr);
+}
+
+
+
+/*========= digital clock */
+.digital-clock{
+    display: flex;
+    padding: 5px 15px;
+    font-size: 2em;
+    font-weight: 600;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    margin-bottom: 30px;
+}
+.digital-clock div{
+    
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
 }
 
